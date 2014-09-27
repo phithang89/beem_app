@@ -1,0 +1,29 @@
+<%= form_for(@ngay) do |f| %>
+  <% if @ngay.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ngay.errors.count, "error") %> prohibited this ngay from being saved:</h2>
+
+      <ul>
+      <% @ngay.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Tien %><br />
+    <%= f.number_field :Tien %>
+  </div>
+  <div class="field">
+    <%= f.label :Ghichu %><br />
+    <%= f.text_field :Ghichu %>
+  </div>
+  <div class="field">
+    <%= f.label :Tong %><br />
+    <%= f.text_field :Tong %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

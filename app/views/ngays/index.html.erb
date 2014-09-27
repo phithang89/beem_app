@@ -1,0 +1,27 @@
+<h1>Listing ngays</h1>
+
+<table>
+  <tr>
+    <th>Tien</th>
+    <th>Ghichu</th>
+    <th>Tong</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ngays.each do |ngay| %>
+  <tr>
+    <td><%= ngay.Tien %></td>
+    <td><%= ngay.Ghichu %></td>
+    <td><%= ngay.Tong %></td>
+    <td><%= link_to 'Show', ngay %></td>
+    <td><%= link_to 'Edit', edit_ngay_path(ngay) %></td>
+    <td><%= link_to 'Destroy', ngay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ngay', new_ngay_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Tien: 1
+  Ghichu: MyString
+  Tong: MyString
+
+two:
+  Tien: 1
+  Ghichu: MyString
+  Tong: MyString
